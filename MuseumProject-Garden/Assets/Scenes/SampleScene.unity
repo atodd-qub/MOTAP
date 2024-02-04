@@ -906,16 +906,16 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: db497918eaa95c14783faadc154432d6, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 2000
+  m_TreeDistance: 700
+  m_TreeBillboardDistance: 400
   m_TreeCrossFadeLength: 200
-  m_TreeMaximumFullLODCount: 10000
-  m_DetailObjectDistance: 1000
+  m_TreeMaximumFullLODCount: 0
+  m_DetailObjectDistance: 600
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 1
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
