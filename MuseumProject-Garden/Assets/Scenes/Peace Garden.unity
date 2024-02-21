@@ -160,7 +160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5238820401998598406, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8
+      value: 3.5116198
       objectReference: {fileID: 0}
     - target: {fileID: 5238820401998598406, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_LocalPosition.x
@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5238820401998598406, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.36
+      value: 9.37
       objectReference: {fileID: 0}
     - target: {fileID: 5238820401998598406, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_LocalPosition.z
@@ -205,6 +205,10 @@ PrefabInstance:
     - target: {fileID: 5241267463746980526, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Name
       value: First Person Controller Minimal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5286307983767585980, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Center.x
@@ -428,27 +432,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.0535
+      value: 4.85022
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.0535
+      value: 4.85022
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.0535
+      value: 4.85022
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 336.3
+      value: 336.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1116
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 327.8
+      value: 327.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -478,6 +482,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 705525777829356259, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26e6c5ac57db54c6f8383b6c013c50e4, type: 2}
     - target: {fileID: 919132149155446097, guid: d3ca4653ee55648668b850cdc3c5c76b, type: 3}
       propertyPath: m_Name
       value: Woman in a bomb blast2
