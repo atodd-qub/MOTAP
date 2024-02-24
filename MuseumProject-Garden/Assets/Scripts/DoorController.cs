@@ -1,39 +1,38 @@
 using UnityEngine;
-using System.Collections;
 
 public class DoorController : MonoBehaviour
 {
-    public float smoothRotationSpeed = 5f;
-    public Quaternion doorOpenRotation;
-    public Quaternion doorClosedRotation;
-
     private bool isOpen = false;
+    private bool isPlayerInside = false;
+    public float openAngle = 90f;
+    public float closeAngle = 0f;
+    public float smooth = 2f;
 
-    private void Start()
+    void Update()
     {
-        doorClosedRotation = transform.rotation; // Set initial closed rotation
-        doorOpenRotation = Quaternion.Euler(0f, 90f, 0f); // Set desired open rotation
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E)) // Example: Press 'E' to interact
+        if (isPlayerInside)
         {
-            isOpen = !isOpen;
-            StartCoroutine(AnimateDoor(isOpen ? doorOpenRotation : doorClosedRotation));
+            // Smoothly rotate the door to open position
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                Quaternion.Euler(isOpen ? openAngle : closeAngle, 0, 0), Time.deltaTime * smooth);
         }
     }
 
-    private IEnumerator AnimateDoor(Quaternion targetRotation)
+    void OnTriggerEnter(Collider other)
     {
-        float elapsedTime = 0f;
-        Quaternion startRotation = transform.rotation;
-
-        while (elapsedTime < 1f)
+        if (other.CompareTag("Player"))
         {
-            elapsedTime += Time.deltaTime * smoothRotationSpeed;
-            transform.rotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime);
-            yield return null;
+            isPlayerInside = true;
+            isOpen = true; // Automatically open the door when player enters
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInside = false;
+            isOpen = false; // Automatically close the door when player exits
         }
     }
 }
