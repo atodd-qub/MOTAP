@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
@@ -7,6 +8,7 @@ public class DoorController : MonoBehaviour
     public float openAngle = 90f;
     public float closeAngle = 0f;
     public float smooth = 2f;
+    public float delayBeforeClosing = 1f;
 
     void Update()
     {
@@ -14,7 +16,7 @@ public class DoorController : MonoBehaviour
         {
             // Smoothly rotate the door to open position
             transform.rotation = Quaternion.Slerp(transform.rotation,
-                Quaternion.Euler(isOpen ? openAngle : closeAngle, 0, 0), Time.deltaTime * smooth);
+                Quaternion.Euler(0, 0, isOpen ? openAngle : closeAngle), Time.deltaTime * smooth);
         }
     }
 
@@ -32,7 +34,13 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInside = false;
-            isOpen = false; // Automatically close the door when player exits
+            StartCoroutine(CloseDoorWithDelay(delayBeforeClosing)); // Add a delay before closing the door
         }
+    }
+
+    IEnumerator CloseDoorWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isOpen = false; // Automatically close the door after the delay
     }
 }
